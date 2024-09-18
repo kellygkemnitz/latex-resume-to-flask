@@ -1,0 +1,1 @@
+This Python script is designed to convert a LaTeX resume template into a PDF file based on the type of role specified by the user.
