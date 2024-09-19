@@ -26,7 +26,7 @@ RUN python3 -m pip install -r requirements.txt
 ARG name='Kelly Kemnitz'
 ARG role='qa_engineer'
 
-EXPOSE 80
+EXPOSE 5000
 
 RUN python3 latex_to_pdf.py -n $name -t $role
 
