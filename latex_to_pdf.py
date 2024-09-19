@@ -43,5 +43,8 @@ try:
     pdfl.set_pdf_filename(pdf_filename)
     pdf, log, completed_process = pdfl.create_pdf(keep_pdf_file=True, keep_log_file=False)
     print(f'{pdf_filename}.pdf generated successfully and placed in {resumes_dir}')
+
+    os.system(f'cp {pdf_filename}.pdf {os.path.join(resumes_dir), 'resume.pdf'}')
+
 except Exception as e:
     print(f'An error occurred: {e}')

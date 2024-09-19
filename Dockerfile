@@ -23,11 +23,19 @@ WORKDIR /python-latex-resume
 
 RUN python3 -m pip install -r requirements.txt
 
-ARG NAME='Kelly Kemnitz'
-ARG ROLE='qa_engineer'
-
-CMD ['python3', 'latex_to_pdf.py', '-n', '${NAME}', '-t', '${ROLE}']
+ARG name='Kelly Kemnitz'
+ARG role='qa_engineer'
 
 EXPOSE 80
 
-CMD ['gunicorn', '-b', '0.0.0.0:80', '-w', '4', 'flask:app']
+RUN python3 latex_to_pdf.py -n $name -t $role
+
+# RUN echo '#!/bin/sh python3 latex_to_pdf.py -n ${NAME} -t ${ROLE}' > /entrypoint.sh
+# \n\
+# gunicorn -b 0.0.0.0:80 -w 4 flask:app' > /entrypoint.sh
+
+# RUN chmod +x /entrypoint.sh
+
+# CMD ["/entrypoint.sh"]
+
+# ENTRYPOINT ['gunicorn', '-b', '0.0.0.0:80']
