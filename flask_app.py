@@ -1,14 +1,14 @@
 from flask import Flask, send_from_directory, render_template
 
-app = Flask(__name__)
+flask_app = Flask(__name__)
 
-@app.route('/')
+@flask_app.route('/')
 def home():
     return render_template('index.html')
 
-@app.route('/resume')
+@flask_app.route('/resume')
 def resume():
     return send_from_directory('static', 'resume.pdf')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    flask_app.run(debug=True)
