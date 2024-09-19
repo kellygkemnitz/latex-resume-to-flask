@@ -30,12 +30,4 @@ EXPOSE 80
 
 RUN python3 latex_to_pdf.py -n $name -t $role
 
-# RUN echo '#!/bin/sh python3 latex_to_pdf.py -n ${NAME} -t ${ROLE}' > /entrypoint.sh
-# \n\
-# gunicorn -b 0.0.0.0:80 -w 4 flask:app' > /entrypoint.sh
-
-# RUN chmod +x /entrypoint.sh
-
-# CMD ["/entrypoint.sh"]
-
-# ENTRYPOINT ['gunicorn', '-b', '0.0.0.0:80']
+CMD ['gunicorn', '-b', '0.0.0.0:80', '-w', '4', 'flask:app']

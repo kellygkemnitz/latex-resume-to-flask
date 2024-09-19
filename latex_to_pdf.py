@@ -6,6 +6,7 @@ from pdflatex import PDFLaTeX
 
 templates_dir = Path('templates/')
 resumes_dir = Path('resumes/')
+static_dir = Path('static/')
 
 # Create the parser
 parser = argparse.ArgumentParser(description='A Python script to convert a resume template in LaTeX format to a PDF, based on type of role.')
@@ -48,7 +49,7 @@ try:
     generated_pdf = resumes_dir / f'{pdf_filename}.pdf'
     print(f'Successfully created {generated_pdf}')
 
-    generic_pdf = resumes_dir / 'resume.pdf'
+    generic_pdf = static_dir / 'resume.pdf'
     os.system(f'cp "{generated_pdf}" "{generic_pdf}"')
     print(f'Succesfully created {generic_pdf}')
 
