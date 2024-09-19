@@ -22,3 +22,12 @@ RUN cd python-latex-resume
 WORKDIR /python-latex-resume
 
 RUN python3 -m pip install -r requirements.txt
+
+ARG NAME='Kelly Kemnitz'
+ARG ROLE='qa_engineer'
+
+CMD ['python3', 'latex_to_pdf.py', '-n', '${NAME}', '-t', '${ROLE}']
+
+EXPOSE 80
+
+CMD ['gunicorn', '-b', '0.0.0.0:80', '-w', '4', 'flask:app']
