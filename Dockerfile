@@ -30,4 +30,4 @@ EXPOSE 80
 
 RUN python3 latex_to_pdf.py -n $name -t $role
 
-CMD ['gunicorn', '-b', '0.0.0.0:80', '-w', '4', 'flask:app']
+CMD ['gunicorn', '-b', '0.0.0.0:5000', '-w', '4', 'flask_app:app']
