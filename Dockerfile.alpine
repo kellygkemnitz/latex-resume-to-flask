@@ -14,8 +14,6 @@ WORKDIR /python-latex-resume
 
 RUN python3 -m venv venv
 
-RUN source venv/bin/activate
-
 RUN python3 -m pip install -r requirements.txt
 
 ARG name='Kelly Kemnitz'
