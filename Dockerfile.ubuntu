@@ -1,20 +1,25 @@
-FROM alpine
+FROM ubuntu:latest
 
-RUN apk update && apk add \
-    python3 \
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Etc/UTC
+
+RUN apt-get update && apt-get install -y \
+    python3-pip \
     git \
-    py3-pip \
-    texlive-full
+    latexmk \
+    texlive-latex-base \
+    texlive-latex-extra \
+    texlive-fonts-recommended \
+    texlive-fonts-extra \
+    texlive-pictures \
+    texlive-science \
+    texlive-lang-cyrillic
 
 RUN git clone https://github.com/kellygkemnitz/python-latex-resume.git
 
 RUN cd python-latex-resume
 
 WORKDIR /python-latex-resume
-
-RUN python3 -m venv venv
-
-RUN source venv/bin/activate
 
 RUN python3 -m pip install -r requirements.txt
 
