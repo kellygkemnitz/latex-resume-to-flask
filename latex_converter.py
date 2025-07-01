@@ -61,8 +61,6 @@ class ResumeGenerator:
                 raise FileNotFoundError(f'Template file {template_file} does not exist.')
 
             pdf = PDFLaTeX.from_texfile(self.templates_dir / f'{self.resume_type}.tex')
-            # pdf.set_output_directory(self.resumes_dir)
-            # pdfl.set_pdf_filename(self.pdf_filename)
             
             pdf_bytes, log, completed_process = pdf.create_pdf(
                 keep_pdf_file=True, keep_log_file=False
