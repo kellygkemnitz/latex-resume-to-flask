@@ -17,6 +17,8 @@ class ResumeGenerator:
         self.resume_type = resume_type
 
         self.type_mapping = {
+            'default': 'Default',
+            'default_alt': 'Default Alt',
             'it_analyst': 'IT Analyst',
             'qa_engineer': 'Quality Assurance Engineer',
             'qa_analyst': 'Quality Assurance Analyst',
@@ -63,7 +65,7 @@ class ResumeGenerator:
             pdf = PDFLaTeX.from_texfile(self.templates_dir / f'{self.resume_type}.tex')
             
             pdf_bytes, log, completed_process = pdf.create_pdf(
-                keep_pdf_file=True, keep_log_file=False
+                keep_pdf_file=False, keep_log_file=False
             )
             
             # Create .pdf filename in resumes/ dir using filename {full_name} - {human-readable role}
@@ -108,7 +110,7 @@ if __name__ == "__main__":
     parser.add_argument(
         '-t', '--type',
         type=str,
-        choices=['it_analyst', 'qa_engineer', 'qa_analyst', 'sdet', 'software_dev', 'sre'],
+        choices=['default', 'default_alt', 'it_analyst', 'qa_engineer', 'qa_analyst', 'sdet', 'software_dev', 'sre'],
         default='qa_engineer',
         help='Type of resume to generate'
     )
