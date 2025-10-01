@@ -23,7 +23,8 @@ class ResumeGenerator:
             'qa_engineer': 'Quality Assurance Engineer',
             'qa_analyst': 'Quality Assurance Analyst',
             'sdet': 'Software Development Engineer in Test',
-            'software_dev': 'Software Developer',
+            'sw_dev': 'Software Developer',
+            'sw_eng': 'Software Engineer',
             'sre': 'Site Reliability Engineer'
         }
         
@@ -110,7 +111,7 @@ if __name__ == "__main__":
     parser.add_argument(
         '-t', '--type',
         type=str,
-        choices=['default', 'default_alt', 'it_analyst', 'qa_engineer', 'qa_analyst', 'sdet', 'software_dev', 'sre'],
+        choices=['default', 'default_alt', 'it_analyst', 'qa_engineer', 'qa_analyst', 'sdet', 'sw_dev', 'sw_eng', 'sre'],
         default='qa_engineer',
         help='Type of resume to generate'
     )
