@@ -25,7 +25,8 @@ class ResumeGenerator:
             'sdet': 'Software Development Engineer in Test',
             'sw_dev': 'Software Developer',
             'sw_eng': 'Software Engineer',
-            'sre': 'Site Reliability Engineer'
+            'sre': 'Site Reliability Engineer',
+            'source': 'FAANG'
         }
         
         if self.resume_type not in self.type_mapping:
@@ -111,7 +112,7 @@ if __name__ == "__main__":
     parser.add_argument(
         '-t', '--type',
         type=str,
-        choices=['default', 'default_alt', 'it_analyst', 'qa_engineer', 'qa_analyst', 'sdet', 'sw_dev', 'sw_eng', 'sre'],
+        choices=['default', 'default_alt', 'it_analyst', 'qa_engineer', 'qa_analyst', 'sdet', 'sw_dev', 'sw_eng', 'sre', 'source'],
         default='qa_engineer',
         help='Type of resume to generate'
     )
