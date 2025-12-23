@@ -1,0 +1,148 @@
+\documentclass[10pt]{article}       % set main text size
+\usepackage[letterpaper,                % set paper size to letterpaper. change to a4paper for resumes outside of North America
+top=0.5in,                          % specify top page margin
+bottom=0.5in,                       % specify bottom page margin
+left=0.5in,                         % specify left page margin
+right=0.5in]{geometry}              % specify right page margin
+                       
+\usepackage{XCharter}               % set font
+\usepackage[T1]{fontenc}            % output encoding
+\usepackage[utf8]{inputenc}         % input encoding
+\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
+\usepackage[hidelinks]{hyperref}    % format hyperlinks
+\usepackage{titlesec}               % enable section title customization
+\raggedright                        % disable text justification
+\pagestyle{empty}                   % disable page numbering
+
+% ensure PDF output will be all-Unicode and machine-readable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% format section headings: bolding, size, white space above and below horizontal rule
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+
+% format bullet points: size, white space above and below, white space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt}
+
+% resume starts here
+\begin{document}
+
+% name
+\centerline{\Huge Kelly Kemnitz}
+
+\vspace{5pt}
+
+% contact information
+\centerline{\large Wichita, KS | (316) 648-6290 | \href{mailto:kellygkemnitz@gmail.com}{kellygkemnitz@gmail.com} | \href{https://www.linkedin.com/in/kellykemnitz/}{linkedin.com/in/kellykemnitz}}
+
+\vspace{-10pt}
+
+% experience section
+\section*{Experience}
+\textbf{Koch, Inc.}, Wichita, KS \hfill \textit{November 2024 \textendash\ Present} \\
+\vspace{1pt}
+Linux System Administrator \\
+% \vspace{-6.5pt}
+\begin{itemize}
+  \item Developed Ansible automation to transform manual and script-based processes into orchestrated workflows, enabling concurrent execution across the server fleet instead of single-server runs; this modernized approach leveraged version control for team collaboration and continuous improvement.
+  \item Automated package version auditing across Linux systems in CI/CD environments using a Python/Pandas application to guarantee configuration uniformity and strict compliance with deployment standards.
+  \item Provided data-driven visibility for leadership by generating ServiceNow dashboards and reports that enabled management and product stakeholders to monitor and track the success of hosting operations teams.
+  \item Accelerated server deployment and maintenance by creating Ansible playbooks and roles to fully onboard Linux systems to the Uyuni infrastructure management platform, centralizing patching and package management.
+  \item Enhanced license management accuracy by creating a Python/Pandas tool to reconcile and merge data between Red Hat account portals and the ServiceNow CMDB.
+  \item Maintained system reliability and high-availability for mission-critical Linux systems; provided key operational support, leveraging VMware and storage expertise to assist hosting operations teams with complex outage mitigation.
+\end{itemize}
+
+\textbf{NetApp, Inc.}, Wichita, KS \hfill \textit{October 2011 \textendash\ August 2024} \\
+\vspace{1pt}
+Quality Assurance Engineer III \textit{(April 2016 \textendash\ August 2024)} \\
+Quality Assurance Engineer II \textit{(August 2014 \textendash\ April 2016)} \\
+Quality Assurance Engineer I \textit{(October 2011 \textendash\ August 2014)} \\
+% \vspace{-3.5pt}
+\begin{itemize}
+  \item Drove continuous process improvement as the Interoperability Team Lead. Served as the technical authority across the testing organization and successfully mentored up to 10 junior engineers and student contractors.
+  \item Optimized budget allocation and reduced capital costs by 60\% through the successful conversion of physical iSCSI test configurations to a VMware virtual infrastructure.
+  \item Spearheaded the transition to Agile methodologies, implementing a 20-day sprint cycle and daily stand-ups to boost team productivity and optimize workflow.
+  % \item Scoped, tested, and certified over 1,200 distinct VMware solutions for compatibility with NetApp block storage products, including topologies such as NVMe over Fabrics (NVMe-oF).
+  % \item Resolved issues and provided expert guidance by efficiently managing escalations from customer support and technical marketing teams.
+  % \item Acted as team representative in defect stand-up meetings, ensuring release health and championing potential stop-ship issues.
+  \item Coordinated qualification efforts with OEMs by developing tailored test plans, ensuring seamless alignment with their product release schedules.
+  \item Executed a cross-organizational strategy for continuous system updating and patching, successfully guaranteeing that all lab environments were protected against the latest Common Vulnerabilities and Exposures (CVEs).
+  % \item Orchestrated a strategic partnership with VMware and engaged bi-weekly to fast-track defect resolution, discuss roadmap milestones, and secure early access to VMware builds, enhancing the product delivery lifecycle.
+  % \item Consolidated hardware components across test configurations, decreasing the lab footprint by 40\% while optimizing resource utilization and maximizing test coverage.
+  % \item Optimized VMware deployment times in lab environments by 75\% through the development of automation scripts and integration of configuration management tools.
+  \item Architected and maintained a centralized VMware vCenter infrastructure, significantly enhancing collaboration and resource sharing between development and quality assurance teams.
+  \item Conducted comprehensive testing on complex configurations, incorporating physical servers, host protocol adapters, and multi-path drivers to ensure seamless integration with block storage platforms.
+  % \item Developed and maintained documentation for Windows Server solutions, improving configuration processes for both internal teams and external customers.
+  % \item Pinpointed and verified use cases for innovations such as Hyper-V Virtual Fibre Channel, boosting storage scalability.
+\end{itemize}
+
+% \vspace{2pt}
+
+% \textbf{SCTelcom} – Medicine Lodge, KS \\
+% \textbf{Network Administrator II} \hfill \textbf{January 2005 – August 2008} \\
+% \vspace{-6.5pt}
+% \begin{itemize}
+%   \item Piloted a managed IT services initiative, helping local small businesses enhance their technology infrastructure.
+%   \item Administered and maintained system servers and networking equipment for internal and external operations.
+%   \item Compiled an inventory of unused datacom equipment and sold obsolete items through third-party resellers to other telecommunciation companies.
+% \end{itemize}
+
+% \textbf{Outside Plant Technician} \hfill October 2003 - January 2005 \\
+% \vspace{-9pt}
+% \begin{itemize}
+%   \item Installed telephone and data services for residential and business customers.
+%   \item Served as on-call technician every two weeks, providing 24/7 availability for residential and business customers experiencing telephone outages.
+% \end{itemize}
+
+\vspace{-16.5pt}
+
+
+% education section
+\section*{Education}
+\textbf{\href{https://www.wichita.edu}{Wichita State University}}, Wichita, KS \hfill May 2012 \\
+\vspace{1pt}
+\textbf{Bachelor of Science in Computer Science} \\
+\vspace{1pt}
+\textbf{Honors:} \textit{cum laude} \\
+
+
+% projects section
+% \section*{Projects}
+% \textbf{Flask Resume App} \hfill \href{https://github.com/kellygkemnitz/flask-resume-app}{github.com/kellygkemnitz/flask-resume-app} \\
+% % \vspace{-9pt}
+% \begin{itemize}
+%  \item Simple Flask application that serves a PDF file and displays it directly on a homepage.
+% \end{itemize}
+
+\vspace{-10pt}
+
+% skills section
+\section*{Technical Skills}
+\newlength{\mylength}
+\setlength{\mylength}{9.25em}
+
+\hangindent=\mylength
+\textbf{Automation and Containerization}: Ansible, Docker, Podman \\
+\hangindent=\mylength
+\textbf{Cloud Platforms and Services:} Amazon Web Services (AWS) \\
+\hangindent=\mylength
+\textbf{Data Science and Developer Tools:} Jupyter Notebooks, Python Virtual Environments, Visual Studio Code \\
+\hangindent=\mylength
+\textbf{Languages:} Python, Bash, PowerShell, VMware PowerCLI \\
+\hangindent=\mylength
+\textbf{Networking:} Cisco IOS, Cisco NX-OS, NVIDIA Mellanox MLNX-OS \\
+\hangindent=\mylength
+\textbf{Operating Systems:} VMware vSphere ESXi, Red Hat Enterprise Linux, SUSE Linux Enterprise Server, Ubuntu, Microsoft Windows Server, Oracle Linux \\
+\hangindent=\mylength
+\textbf{Project and Operations Management Tools:} ServiceNow, Jira, Confluence \\
+\hangindent=\mylength
+\textbf{Storage Protocols:} Fibre Channel, iSCSI, NFS, NVMe over Fabrics (NVMe-oF), Serial Attached SCSI (SAS) \\
+\hangindent=\mylength
+\textbf{Version Control:} BitBucket, Git, GitHub, GitLab, Perforce \\
+\hangindent=\mylength
+\textbf{Web and Data Frameworks:} Dash, Flask, Pandas, Plotly \\
+\hangindent=\mylength
+
+
+\end{document}
