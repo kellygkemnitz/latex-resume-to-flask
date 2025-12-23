@@ -2,7 +2,6 @@ venv/
 .venv/
 *.ipynb*
 *.log
-resumes/*
 *.pdf
 *.docx
 *__pycache__*
