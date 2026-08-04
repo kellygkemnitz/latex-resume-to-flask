@@ -6,3 +6,4 @@ resumes/*
 *.pdf
 *.docx
 *__pycache__*
+**/__pycache__/
