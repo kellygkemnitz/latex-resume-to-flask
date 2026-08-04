@@ -21,7 +21,7 @@ chardet==4.0.0
 charset-normalizer==3.3.2
 chromedriver==2.24.1
 click==8.1.7
-cloud-init==24.3.1
+# cloud-init
 colorama==0.4.4
 comm==0.2.2
 command-not-found==0.3
